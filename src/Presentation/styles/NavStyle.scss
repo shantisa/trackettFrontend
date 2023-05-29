@@ -1,0 +1,188 @@
+.nav{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+  list-style-type: none;
+  background-color: darkcyan;
+  text-align: center;
+  font-family: 'Josefin Sans';
+  padding: 5px 30px;
+  color: white;
+  li{
+    a{
+      display: block;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+  }
+  #logo{
+    font-size: 50px;
+    font-weight: 900;
+    cursor: pointer;
+  }
+  .dropdwn{
+    .dropbtn{
+      border-radius: 50%;
+      margin-top: 10px;
+      padding: 10px;
+      .fa-caret-down{
+        color: white;
+        font-size: 15px;
+      }
+    }
+    #avatar{
+      width: 57px;
+      height: 57px;
+    }
+    .dropdwn-content{
+      display: none;
+      position: absolute;
+      background-color: darkcyan;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+  }
+  .searchBar{
+      margin: auto 0;
+      height: 39px;
+      line-height: 39px;
+      display: flex;
+      flex-grow: 0.5;
+    .searchInput{
+      border: none;
+      outline: none;
+      background-color: white;
+      height: 100%;
+      padding: 0 10px;
+      font-size: 16px;
+      width: 100%;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius:5px;
+    }
+    .searchBtn{
+      margin-bottom: 1px;
+      border: 2px solid white;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      height: 100%;
+      position: relative;
+      cursor: pointer;
+      z-index: 1;
+      .fa-magnifying-glass{
+        color: white;
+        font-size: 16px;
+      };
+    }
+  }
+  .bar{
+    position: relative;
+    margin: auto;
+    display: none;
+    span{
+      position: absolute;
+      font-size: 35px;
+    }
+  }
+  input[type="checkbox"]{
+    -webkit-appearance: none;
+    display: none;
+  }
+  .searchInput:focus{
+    outline: none;
+  }
+  .searchBtn::after{
+    height: 100%;
+    width:0;
+    content: '';
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s;
+  }
+  .searchBtn:hover::after {
+    width: 100%;
+  }
+  .searchBtn:hover{
+    .fa-magnifying-glass{color: darkcyan};
+  }
+  .dropdwn:hover .dropbtn {
+    background-color: rgba(0,128,128,0.8);
+  }
+  .dropdwn-content a:hover {background-color: teal;}
+  .dropdwn:hover .dropdwn-content {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .nav{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: darkcyan;
+    #logo{
+      display: inline-block;
+    }
+
+    li{
+      text-align: center;
+      a{
+        font-size: 20px;
+        padding: 17px;
+        display: block;
+      }
+    }
+    .searchBar{
+      width: 100%;
+      display: inline-flex;
+      justify-content: center;
+      margin-bottom: 15px;
+      .searchInput{
+        width: 85%;
+      }
+    }
+    .dropdwn{
+      .dropbtn{
+        display: none;
+      }
+      .dropdwn-content{
+        display: block;
+        position: relative;
+        background-color: darkcyan;
+        box-shadow: none;
+        height: 0;
+        visibility: hidden;
+        transition: 0.3s;
+      }
+    }
+    .bar{
+      display: block;
+      position: absolute;
+      top: 27px;
+      right: 65px;
+      cursor: pointer;
+      #times{
+        display: none;
+      }
+    }
+    #check:checked ~ .bar #times{
+      display: block;
+    }
+    #check:checked ~ .bar #bars{
+      display: none;
+    }
+    #check:checked ~ .dropdwn .dropdwn-content{
+      visibility: visible;
+      height: 126px;
+    }
+  }
+}

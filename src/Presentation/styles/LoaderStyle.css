@@ -1,0 +1,43 @@
+.loaderContainer {
+  background-color: white;
+  border-radius: 15px;
+  display: inline-flex;
+  width: 160px;
+  box-shadow: 3px 3px 2px black;
+}
+.loaderContainer .loader {
+  margin: 5px;
+  border: 10px solid lightgray;
+  border-radius: 50%;
+  border-top: 10px solid darkcyan;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loaderContainer #loadText {
+  font-family: "Josefin Sans";
+  margin: auto;
+  margin-left: 1px;
+  font-size: 21px;
+  font-weight: bold;
+  color: darkcyan;
+}
+
+/*# sourceMappingURL=LoaderStyle.css.map */

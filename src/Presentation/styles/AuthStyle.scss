@@ -1,0 +1,24 @@
+.authForms{
+  margin: auto;
+  text-align: center;
+  margin-top: 100px;
+  max-width: 600px;
+  background-color: darkcyan;
+  border-radius: 15px;
+  box-shadow: 2px 4px 10px gray;
+  position: relative;
+  @media only screen and (max-width: 600px) {
+    max-width: 400px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .tabButton{
+    margin-bottom: 35px;
+  }
+  .msgLoader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

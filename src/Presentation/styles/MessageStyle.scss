@@ -1,0 +1,20 @@
+.alertContainer{
+  padding: 20px;
+  background-color: white;
+  color: darkcyan;
+  border-radius: 15px;
+  box-shadow: 3px 3px 2px black;
+  .exitBtn{
+    margin-left: 10px;
+    color: lightgray;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .exitBtn:hover{
+    color: teal;
+  }
+}
